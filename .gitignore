@@ -1,0 +1,48 @@
+# Environment variables (не пушим!)
+.env
+.env.local
+.env.*.local
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+*.so
+*.egg
+*.egg-info
+dist/
+build/
+venv/
+env/
+.venv/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Logs
+*.log
+
+# Project specific
+*.db
+*.sqlite
+data/
+outputs/
+tmp/
+*.pkl
+*.pickle
+*.pt
+*.pth
+models/
+
+# LM Studio
+*.gguf
+*.bin
+*.safetensors
+.lmstudio/

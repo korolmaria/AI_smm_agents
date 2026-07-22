@@ -1,0 +1,18 @@
+# Основной фреймворк (рекомендую LangGraph)
+langgraph>=0.0.20
+langchain>=0.1.0
+langchain-openai>=0.0.5
+
+# Для работы с API и настройками
+python-dotenv>=1.0.0
+pydantic>=2.0.0
+typing-extensions>=4.0.0
+
+# Для мониторинга (Langfuse)
+langfuse>=2.0.0
+
+# Для удобного вывода в консоль (цветной лог)
+colorama>=0.4.6
+
+# Опционально — если захотите сохранять результаты в JSON
+jsonpickle>=3.0.0
