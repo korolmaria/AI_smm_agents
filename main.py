@@ -1,6 +1,8 @@
+# main.py
 from client import lm_client
 from graph.workflow import Workflow
 from graph.state import create_initial_state
+from langfuse_client import flush_langfuse
 import json
 from datetime import datetime
 
@@ -46,6 +48,9 @@ def run_workflow(topic: str, save_results: bool = True):
     
     # Запускаем workflow
     result = workflow.run(topic)
+    
+    # Сбрасываем буфер Langfuse
+    flush_langfuse()
     
     # Показываем результаты
     print("\n" + "=" * 60)
@@ -163,7 +168,7 @@ def main():
         print("  1. Проверьте финальный текст в выводе выше")
         print("  2. Метаданные для публикации готовы")
         print("  3. Результаты сохранены в папке output/")
-        print("  4. Можете запустить снова с другой темой")
+        print("  4. Данные отправлены в Langfuse — проверь в интерфейсе!")
     else:
         print("\n" + "=" * 60)
         print("❌ КОНТЕНТ НЕ БЫЛ СОЗДАН")

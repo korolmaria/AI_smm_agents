@@ -12,6 +12,14 @@ LM_STUDIO_API_KEY = os.getenv("LM_STUDIO_API_KEY", "not-needed")
 MODEL_NAME = os.getenv("MODEL_NAME", "qwen/qwen3-vl-4b")
 
 # ============================================
+# Langfuse Configuration
+# ============================================
+LANGFUSE_HOST = os.getenv("LANGFUSE_HOST", "https://cloud.langfuse.com")
+LANGFUSE_PUBLIC_KEY = os.getenv("LANGFUSE_PUBLIC_KEY", "")
+LANGFUSE_SECRET_KEY = os.getenv("LANGFUSE_SECRET_KEY", "")
+LANGFUSE_DEBUG = os.getenv("LANGFUSE_DEBUG", "False").lower() == "true"
+
+# ============================================
 # Model Parameters
 # ============================================
 MAX_TOKENS = int(os.getenv("MAX_TOKENS", 2048))
